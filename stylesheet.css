@@ -1,0 +1,152 @@
+@import url('https://fonts.googleapis.com/css2?family=Big+Shoulders:opsz,wght@10..72,100..900&family=Lexend+Deca:wght@100..900&display=swap');
+
+:root{
+    --own-gold: hsl(31, 77%, 52%);
+    --own-cyan: hsl(184, 100%, 22%);
+    --own-green: hsl(179, 100%, 13%);
+    --text-font-color: hsla(0, 0%, 100%, 0.75);
+    --other-color: hsl(0, 0%, 95%);
+}
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+html{
+    height: 100%;
+}
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    background-color: white;
+    max-width: 100%;
+}
+img{
+    width: 60px;
+    height: 60px;
+    object-fit: contain;
+}
+
+/*Font format*/
+h2{
+    font-family: Big Shoulders;
+    color: var(--other-color);
+    font-size: 34px;
+    line-height: 32px;
+    
+}
+p{
+    width: 180px;
+    font-size: 13px;
+    line-height: 25px;
+    font-family: Lexend Deca;
+    color: var(--text-font-color);
+}
+a{
+    font-family: Lexend Deca;
+    text-decoration: none;
+    font-size: 14px;
+    margin-top: auto;
+}
+
+/*Card container*/
+.card-container{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+
+    max-width: 100%;
+    width: 805px;
+    height: 460px;
+
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+/*Columns format*/
+div[class$="column"]{
+    display: flex;
+    flex-direction: column;
+    padding: 35px 35px;
+}
+
+/*Every element found in every columns*/
+div[class$="column"]>img{
+    margin-bottom: 20px;
+}
+div[class$="column"]>h2{
+    margin-bottom: 20px;
+}
+div[class$="column"]>div[class$="container"]{
+    text-align: center;
+    margin-top: auto;
+    padding: 15px 15px;
+    width: 137px;
+
+    border: 2px solid white;
+    background-color: var(--other-color);
+    border-radius: 30px;
+}
+div[class$="column"]>div[class$="container"]:hover{
+    background-color: transparent;
+    cursor: pointer;
+}
+
+/*First column*/
+.first-column{
+    background-color: var(--own-gold);
+}
+.first-column a{
+    color: var(--own-gold);
+}
+.first-column>div[class$="container"]:hover{
+    border: 2px solid white;
+    background-color: var(--own-gold);
+}
+.first-column>div[class$="container"]:hover a{
+    color: var(--text-font-color);
+}
+
+/*Second column*/
+.second-column{
+    background-color: var(--own-cyan);
+}
+.second-column a{
+    color: var(--own-cyan);
+}
+.second-column>div[class$="container"]:hover{
+    border: 2px solid white;
+    background-color: var(--own-cyan);
+}
+.second-column>div[class$="container"]:hover a{
+    color: var(--text-font-color);
+}
+
+/*Third column*/
+.third-column{
+    background-color: var(--own-green);
+}
+.third-column a{
+    color: var(--own-green);
+}
+.third-column>div[class$="container"]:hover{
+    border: 2px solid white;
+    background-color: var(--own-green);
+}
+.third-column>div[class$="container"]:hover a{
+    color: var(--text-font-color);
+}
+
+
+@media screen and (320px <= width <= 750px) {
+    .card-container{
+        grid-template-columns: 1fr;
+        width: unset;
+        height: unset;
+        margin-top: auto;
+    }
+    .card-container p{
+        margin-bottom: 1.5rem;
+    }
+}
